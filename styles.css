@@ -1028,7 +1028,7 @@ nav .navigation ul li a:hover{
 }
 .wrapper .items{
   display: flex;
-  max-width: 720px;
+  max-width: 950px;
   width: 100%;
   justify-content: space-between;
 }
