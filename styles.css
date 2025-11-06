@@ -1018,43 +1018,8 @@ nav .navigation ul li a:hover{
     
 } 
 
-.wrapper{
-  margin: 100px auto;
-  max-width: 1100px;
-}
-.wrapper nav{
-  display: flex;
-  justify-content: center;
-}
-.wrapper .items{
-  display: flex;
-  max-width: 950px;
-  width: 100%;
-  justify-content: space-between;
-}
-.items span{
-  padding: 15px 20px;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  color: #007bff;
-  border-radius: 10px;
-  border: 2px solid #007bff;
-  transition: all 0.3s ease;
-}
-.items span.active,
-.items span:hover{
-  color: #fff;
-  background: #007bff;
-}
 
-
-.wrapper{
-    margin: 80px auto 20px auto; /* push content below fixed site nav */
-    max-width: 1100px;
-    position: relative;
-    padding-top: 6px;
-}
+/* gallery section */
 .wrapper nav{
     display: flex;
     justify-content: center;
@@ -1074,9 +1039,8 @@ nav .navigation ul li a:hover{
   padding: 15px 20px;
   font-size: 15px;
   font-weight: 500;
-  cursor: pointer;
   color: #007bff;
-  border-radius: 30px;
+  border-radius: 5px;
   border: 2px solid #007bff;
   transition: all 0.3s ease;
 }
@@ -1084,13 +1048,7 @@ nav .navigation ul li a:hover{
 .items span:hover{
   color: #fff;
   background: #007bff;
-}
-
-
-
-
-
-/* gallery */
+}/* gallery */
 .gallery{
   display: flex;
   flex-wrap: wrap;
