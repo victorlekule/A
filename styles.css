@@ -1034,17 +1034,18 @@ nav .navigation ul li a:hover{
 }
 .wrapper .items{
   display: flex;
-  max-width: 720px;
+  max-width: 950px;
   width: 100%;
   justify-content: space-between;
+  
 }
 .items span{
-  padding: 7px 25px;
-  font-size: 18px;
+  padding: 15px 20px;
+  font-size: 15px;
   font-weight: 500;
   cursor: pointer;
   color: #007bff;
-  border-radius: 50px;
+  border-radius: 30px;
   border: 2px solid #007bff;
   transition: all 0.3s ease;
 }
@@ -1063,6 +1064,7 @@ nav .navigation ul li a:hover{
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
+  
 }
 .gallery .image{
   width: calc(100% / 4);
