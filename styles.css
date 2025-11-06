@@ -1038,7 +1038,7 @@ nav .navigation ul li a:hover{
   font-weight: 500;
   cursor: pointer;
   color: #007bff;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 2px solid #007bff;
   transition: all 0.3s ease;
 }
