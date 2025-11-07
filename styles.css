@@ -79,7 +79,7 @@ nav .navigation ul li{
 }
 nav .navigation ul li a{
     text-decoration: none;
-    color: rgb(21, 21, 100);
+    color: #3498DB;
     font-size: 16px;
     font-style: bold;
     font-weight: 700;  
@@ -88,7 +88,7 @@ nav .navigation ul li a{
 nav .navigation ul li a.active,
 
 nav .navigation ul li a:hover{
-    color: #fdc93b;
+    color: #000000;
 }
 .navigation .btn{
     margin-top: -10px;
@@ -108,14 +108,14 @@ nav .navigation ul li a:hover{
 }
 .navigation .btn a.blue{
     color:#ffffff;
-    background: rgb(21, 21, 100);
+    background: #3498DB;
     transition: 0.3s ease;
 }
 
 
 .navigation a.blue:hover{
-    color: rgb(21, 21, 100);
-    background: #ffffff;
+    color: rgb(255, 255, 255);
+    background: #000000;
 }
 
 
@@ -161,22 +161,22 @@ nav .navigation ul li a:hover{
 }
 #home a.blue{
     color:#ffffff;
-    background: rgb(21, 21, 100);
+    background: #3498DB;
     transition: 0.3s ease;
 }
 
 #home a.yellow{
-    color:rgb(21, 21, 100);
+    color:#3498DB;
     background: rgb(255, 255, 255);
     transition: 0.3s ease;
 }
 #home a.blue:hover{
-    color: rgb(21, 21, 100);
+    color: #3498DB;
     background: #ffffff;
 }
 #home a.yellow:hover{
     color:rgb(255, 255, 255);
-    background: rgb(21, 21, 100);
+    background: #3498DB;
 }
 /*programs*/
 
@@ -190,7 +190,7 @@ nav .navigation ul li a:hover{
     margin-top: 70px;
 }
 #feature .text .h1{
-    color: rgb(236, 0, 0);
+    color: #3498DB;
     font-size: 3rem;
     font-weight: 700;
 }
@@ -202,7 +202,7 @@ nav .navigation ul li a:hover{
 
 }
 #features .fea-box{
-    background-color: #000000;
+    background-color: #3498DB;
     text-align: start;
     padding: 30px 20px;
     min-height: 180px;
@@ -489,79 +489,6 @@ nav .navigation ul li a:hover{
     background: rgb(21, 21, 100);
     color: #fff;
 }
-
-
-
-.explore__container {
-  padding-block: 0;
-  display: grid;
-  gap: 2rem;
-  background-color: #ece8f7;
-  border-radius: 80px;
-  overflow-y: hidden;
-  margin-top: 50px;
- 
-}
-
-.explore__content {
-  padding-block: 5rem;
-  display: grid;
-  place-content: center;
-}
-
-.explore__wrapper {
-  display: none;
-}
-
-.explore__content .section__header {
-  margin-bottom: 2rem;
-}
-
-@media (width > 768px) {
-  .explore__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .explore__content {
-    padding-block: 10rem;
-  }
-
-  .explore__wrapper {
-    display: block;
-    position: relative;
-    isolation: isolate;
-  }
-
-  .explore__wrapper-inner {
-    position: absolute;
-    width: 100%;
-    display: grid;
-    gap: 1rem;
-    animation: scroll 15s linear infinite;
-  }
-
-  .explore__wrapper-inner img {
-    max-width: 370px;
-    margin-inline: auto;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  @keyframes scroll {
-    to {
-      transform: translateY(calc(-50% - 0.5rem));
-    }
-  }
-
-  .discover__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .discover__guide {
-    grid-column: 1/3;
-  }
-}
-
 
 
 
@@ -868,7 +795,7 @@ nav .navigation ul li a:hover{
 #project-home{
     background-image: linear-gradient(rgba(9,5,54, 0.3), rgba(5,4,46, 0.7)), url(picha/school.jpg);
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -876,8 +803,10 @@ nav .navigation ul li a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px;
+    padding: 20px;
+    
 }
+
 #project-home h2 {
     color: white;
     font-size: 2.2rem;
@@ -896,14 +825,15 @@ nav .navigation ul li a:hover{
 /*  project */
 #blog-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     gap: 2rem;
-    padding: 8vw;
+    padding:8vw;
 }
+
 #blog-container .blogs .post{
-    padding-bottom: 60px;
-    width: 60%;
+    padding-bottom: 50px;
+    width: 50%;
     
 }
 
@@ -944,7 +874,7 @@ nav .navigation ul li a:hover{
 }   
 
 #blog-container .cate{
-    width: 120px;
+    width: 110px;
     position: sticky;
     top: 100px;
     padding: 20px;
