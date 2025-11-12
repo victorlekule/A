@@ -1601,36 +1601,447 @@ footer{
     transform: translateY(-3px);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    /* 1. Show the hamburger button */
-    .nav {
+
+
+
+
+/* ====================================
+   ANIMATIONS
+   ==================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 5;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 10;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 5;
+    }
+    to {
+        opacity: 10;
+    }
+}
+
+/* ====================================
+   RESPONSIVE MEDIA QUERIES
+   ==================================== */
+
+/* ====================================
+   TABLET (768px - 1024px)
+   ==================================== */
+@media screen and (max-width: 1024px) {
+    nav img {
+        width: 120px;
+    }
+
+    #home h2 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1.1rem;
+    }
+
+    #about-container {
+        gap: 30px;
+    }
+
+    .impact-wrapper-reverse {
+        gap: 30px;
+    }
+
+    #contact {
+        gap: 30px;
+    }
+
+    .row {
+        gap: 20px;
+    }
+}
+
+/* ====================================
+   MOBILE (320px - 767px)
+   ==================================== */
+@media screen and (max-width: 768px) {
+    
+    /* Navigation Mobile */
+    nav {
+        padding: 15px 5%;
+    }
+
+    nav img {
+        width: 50px;
+    }
+
+    #menu-btn {
         display: block;
     }
 
-    /* 2. Stack the links vertically and hide them by default */
     .navigation {
-        /* Set up the hidden menu for mobile */
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        background-color: #444; /* Slightly darker background for the dropdown */
-        position: absolute; /* Allows it to drop down below the header */
-        top: 60px; /* Adjust based on your header height */
-        left: 0;
-        right: 0;
-        z-index: 10;
+        position: fixed;
+        top: 0;
+        right: 100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--white);
+        box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+        transition: right 0.4s ease;
+        z-index: 9999;
+        overflow-y: auto;
     }
 
-    /* 3. Make the entire navigation bar stack vertically on mobile */
-    .navigation{
-        flex-direction: row; /* Keep brand and button on the same line */
-        align-items: flex-start;
-        position: relative; /* Important for positioning the dropdown */
-    }
-
-    /* 4. Style the active/open menu state */
     .navigation.active {
-        display: flex; /* Show the menu when the 'active' class is added */
+        right: 0;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        padding: 80px 30px 30px;
+        gap: 0;
+    }
+
+    .navigation ul li {
+        width: 100%;
+        border-bottom: 1px solid #000000;
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .navigation .btn {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .navigation .btn a {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    #menu-close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+    }
+
+    /* Hero Sections Mobile */
+    #home {
+        min-height: 60vh;
+        padding: 60px 5%;
+    }
+
+    #home h2 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    #about-home h2,
+    #Contact-home h2,
+    #project-home h2,
+    #Gallery-home h2,
+    #dona-home h2 {
+        font-size: 1.5rem;
+    }
+
+    #Contact-home p,
+    #project-home p,
+    #Gallery-home p,
+    #dona-home p {
+        font-size: 1rem;
+    }
+
+    /* Features Mobile */
+    #features {
+        padding: 60px 5%;
+    }
+
+    #features .text h1 {
+        font-size: 2rem;
+    }
+
+    .fea-base {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .fea-box {
+        padding: 30px 20px;
+    }
+
+    /* Core Values Mobile */
+    #course {
+        padding: 90px 5%;
+        
+    }
+
+    #course h1 {
+        font-size: 2rem;
+        color: #ffffff;
+    }
+
+    .courses-box {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats Mobile */
+    .accomplishments {
+        padding: 20px 5%;
+    }
+
+    .accomplishments-title {
+        font-size: 2rem;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .stat-circle-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    /* Team Mobile */
+    #experts {
+        padding: 60px 25%;
+        
+    }
+
+    #experts h1 {
+        font-size: 1rem;
+    }
+
+    .expert-box {
+        grid-template-columns: 10fr;
+    }
+
+    /* About Page Mobile */
+    #about-container {
+        grid-template-columns: 1fr;
+        padding: 60px 1%;
+        gap: 10px;
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem;
+    }
+    
+
+    /* Impact Section Mobile */
+    .impact-section {
+        padding: 60px 10%;
+    }
+
+    .impact-title {
+        font-size: 2rem;
+    }  
+
+    .impact-description {
+        font-size: 1rem;
+    }
+
+    .impact-stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-stat-number {
+        font-size: 2.5rem;
+    }
+
+    .impact-wrapper-reverse {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .impact-image-area {
+        order: -1;
+    }
+
+    /* Contact Mobile */
+    #contact {
+        grid-template-columns: 1fr;
+        padding: 60px 5%;
+    }
+
+    .getin {
+        padding: 30px 20px;
+    }
+
+    .form-wrapper {
+        padding: 30px 20px;
+    }
+
+    /* Donation Form Mobile */
+    .container {
+        margin: 60px auto;
+    }
+
+    .donation-form h2 {
+        font-size: 2rem;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .container form {
+        padding: 30px 20px;
+    }
+
+    .flex {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* Blog/Projects Mobile */
+    #blog-container {
+        padding: 60px 5%;
+    }
+
+    .blogs {
+        grid-template-columns: 1fr;
+    }
+
+    .blogs-blogpost .post img {
+        height: 250px;
+    }
+
+    .blogs-blogpost .post h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Gallery Mobile */
+  
+@media (max-width: 1000px) {
+  .gallery .image{
+    width: calc(100% / 3);
+  }
+}
+@media (max-width: 800px) {
+  .gallery .image{
+    width: calc(100% / 2);
+  }
+}
+@media (max-width: 700px) {
+  .wrapper nav .items{
+    max-width: 600px;
+  }
+  nav .items span{
+    padding: 7px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper{
+    margin: 30px auto;
+  }
+  .wrapper nav .items{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .items span{
+    margin: 5px;
+  }
+  .gallery .image{
+    width: 100%;
+  }
+}
+
+
+    /* Footer Mobile */
+    footer {
+        padding: 40px 5% 20px;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer__bar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ====================================
+   SMALL MOBILE (320px - 480px)
+   ==================================== */
+@media screen and (max-width: 480px) {
+    #home h2 {
+        font-size: 1.8rem;
+    }
+
+    #home p {
+        font-size: 0.95rem;
+    }
+
+    .btn a {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    #features .text h1,
+    #course h1,
+    .accomplishments-title,
+    #experts h1 {
+        font-size: 1.8rem;
+    }
+
+    .impact-title {
+        font-size: 1.8rem;
+    }
+
+    .donation-form h2 {
+        font-size: 1rem;
+    }
+
+    .stat-circle-wrapper {
+        width: 130px;
+        height: 130px;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+}
+
+/* ====================================
+   PRINT STYLES
+   ==================================== */
+@media print {
+    nav,
+    footer,
+    .btn,
+    #menu-btn,
+    #menu-close {
+        display: none;
+    }
+
+    body {
+        font-size: 10pt;
+        line-height: 1.5;
+        color: #000;
+    }
+
+    section {
+        page-break-inside: avoid;
     }
 }
