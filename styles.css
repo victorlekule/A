@@ -1602,3 +1602,35 @@ footer{
 }
 
 /* Responsive Design */
+@media (max-width: 768px) {
+    /* 1. Show the hamburger button */
+    .nav {
+        display: block;
+    }
+
+    /* 2. Stack the links vertically and hide them by default */
+    .navigation {
+        /* Set up the hidden menu for mobile */
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #444; /* Slightly darker background for the dropdown */
+        position: absolute; /* Allows it to drop down below the header */
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    /* 3. Make the entire navigation bar stack vertically on mobile */
+    .navigation{
+        flex-direction: row; /* Keep brand and button on the same line */
+        align-items: flex-start;
+        position: relative; /* Important for positioning the dropdown */
+    }
+
+    /* 4. Style the active/open menu state */
+    .navigation.active {
+        display: flex; /* Show the menu when the 'active' class is added */
+    }
+}
